@@ -2,8 +2,9 @@
 
 ## 📋 Project Overview
 
-**Time Allocation:** 2-4 hours  
+**Time Allocation:** 3-6 hours  
 **Tech Stack:** React + Express.js + Node.js
+**The project must be submitted by [DEADLINE DATE] at 11:59 PM EST.**
 
 ### What You'll Build
 
@@ -23,7 +24,7 @@ This project allows you to demonstrate:
 
 ### Figma Reference
 
-**Design File:** [Link to your Figma file here]
+**Design File:** [https://www.figma.com/design/afV98h5H455Pmx1ZqlNgbM/Messaging-App?node-id=0-1&t=Vxg3yWBGBtbMmmde-1](https://www.figma.com/design/afV98h5H455Pmx1ZqlNgbM/Messaging-App?node-id=0-1&t=Vxg3yWBGBtbMmmde-1)
 
 ### Visual Specifications
 
