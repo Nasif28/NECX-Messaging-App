@@ -4,7 +4,7 @@
 
 **Time Allocation:** 3-6 hours  
 **Tech Stack:** React + Express.js + Node.js
-**The project must be submitted by [DEADLINE DATE] at 11:59 PM EST.**
+**The project must be submitted by within 3 days of receiving it. Details outlined in the email that the project was received in.**
 
 ### What You'll Build
 

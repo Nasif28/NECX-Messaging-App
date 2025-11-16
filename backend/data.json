@@ -1,0 +1,50 @@
+{
+  "personas": [
+    {
+      "id": "0ab769ee-cbb4-450d-8c6b-075d3a375e6f",
+      "name": "New"
+    },
+    {
+      "id": "cb5f4c67-0493-4fae-bee7-db79f63c449c",
+      "name": "New2"
+    }
+  ],
+  "messages": [
+    {
+      "id": "f84b0846-85dd-4cea-ae91-7f62a61f1ace",
+      "senderId": "0ab769ee-cbb4-450d-8c6b-075d3a375e6f",
+      "text": "goo",
+      "timestamp": 1763276021224
+    },
+    {
+      "id": "8407fe5b-0a6e-4171-b5f6-62828c44d5ea",
+      "senderId": "0ab769ee-cbb4-450d-8c6b-075d3a375e6f",
+      "text": "toooo",
+      "timestamp": 1763276032883
+    },
+    {
+      "id": "b7ddc343-73ec-4187-a7be-e8946d16d7a1",
+      "senderId": "cb5f4c67-0493-4fae-bee7-db79f63c449c",
+      "text": "hiii",
+      "timestamp": 1763276043613
+    },
+    {
+      "id": "047deea6-d397-4480-8361-a9025fd90ae6",
+      "senderId": "cb5f4c67-0493-4fae-bee7-db79f63c449c",
+      "text": "go to",
+      "timestamp": 1763276048005
+    },
+    {
+      "id": "532f92aa-7821-44ab-8741-c849d4676823",
+      "senderId": "0ab769ee-cbb4-450d-8c6b-075d3a375e6f",
+      "text": "nono",
+      "timestamp": 1763276056923
+    },
+    {
+      "id": "621561f7-fad4-4ff7-8b0b-f8793a09814a",
+      "senderId": "cb5f4c67-0493-4fae-bee7-db79f63c449c",
+      "text": "asdddddsdsdsd sd sd",
+      "timestamp": 1763277238627
+    }
+  ]
+}
