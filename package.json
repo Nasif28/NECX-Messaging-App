@@ -22,5 +22,8 @@
     "express"
   ],
   "author": "NECX",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lucide": "^0.554.0"
+  }
 }

@@ -223,6 +223,23 @@ function App() {
           />
           <button onClick={createPersona}>Create</button>
         </section>
+
+        <div className="top-tools">
+          <button onClick={exportData}>⬇️ Export</button>
+
+          <label className="upload-btn">
+            ⬆️ Import
+            <input
+              type="file"
+              accept=".json"
+              onChange={(e) => setImportFile(e.target.files[0])}
+            />
+          </label>
+
+          <button onClick={importData} disabled={!importFile}>
+            Upload
+          </button>
+        </div>
       </header>
 
       <section className="search-section">
@@ -242,64 +259,60 @@ function App() {
               isCurrentSender(msg.senderId) ? "right" : "left"
             }`}
           >
-            {!isCurrentSender(msg.senderId) && (
-              <span className="sender">{getPersonaName(msg.senderId)}</span>
-            )}
-            {editingId === msg.id ? (
-              <input
-                type="text"
-                value={editText}
-                onChange={(e) => setEditText(e.target.value)}
-                onKeyPress={(e) => e.key === "Enter" && updateMessage(msg.id)}
-                onBlur={() => updateMessage(msg.id)}
-                autoFocus
-              />
-            ) : (
-              <span className="text" onClick={() => handleMessageClick(msg)}>
-                {msg.text}
-              </span>
-            )}
-            <div className="actions">
-              <button
-                onClick={() => startEdit(msg)}
-                style={{ display: editingId === msg.id ? "none" : "inline" }}
+            <div className="bubble">
+              {editingId === msg.id ? (
+                <input
+                  type="text"
+                  value={editText}
+                  onChange={(e) => setEditText(e.target.value)}
+                  onKeyPress={(e) => e.key === "Enter" && updateMessage(msg.id)}
+                  autoFocus
+                />
+              ) : (
+                <span className="text">{msg.text}</span>
+              )}
+
+              <div
+                className={`meta-row ${
+                  isCurrentSender(msg.senderId) ? "right" : "left"
+                }`}
               >
-                ✏️
-              </button>
+                {
+                  <span className="sender">
+                    {getPersonaName(msg.senderId)} - {" "}
+                  </span>
+                }
+
+                <span className="timestamp">
+                  {new Date(msg.timestamp).toLocaleTimeString("en-US", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    hour12: true,
+                  })}
+                </span>
+              </div>
+            </div>
+            <div className="actions">
+              {editingId !== msg.id && (
+                <button onClick={() => startEdit(msg)}>✏️</button>
+              )}
               <button onClick={() => deleteMessage(msg.id)}>🗑️</button>
             </div>
-            <span className="timestamp">
-              {new Date(msg.timestamp).toLocaleTimeString([], {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
-            </span>
           </div>
         ))}
       </section>
 
-      <section className="input-section">
-        <input
-          type="text"
-          placeholder="Type your message..."
-          value={messageText}
-          onChange={(e) => setMessageText(e.target.value)}
-          onKeyPress={(e) => e.key === "Enter" && sendMessage()}
-        />
+      <section className="input-wrapper">
+        <div className="input-bubble">
+          <input
+            type="text"
+            placeholder="Type your message..."
+            value={messageText}
+            onChange={(e) => setMessageText(e.target.value)}
+            onKeyPress={(e) => e.key === "Enter" && sendMessage()}
+          />
+        </div>
         <button onClick={sendMessage}>Send</button>
-      </section>
-
-      <section className="data-section">
-        <button onClick={exportData}>Export Data</button>
-        <input
-          type="file"
-          accept=".json"
-          onChange={(e) => setImportFile(e.target.files[0])}
-          style={{ margin: "0 10px" }}
-        />
-        <button onClick={importData} disabled={!importFile}>
-          Import Data
-        </button>
       </section>
     </div>
   );
