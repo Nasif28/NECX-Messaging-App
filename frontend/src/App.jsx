@@ -17,7 +17,6 @@ function App() {
   const [importFile, setImportFile] = useState(null);
   const chatRef = useRef(null);
 
-  // Auto-scroll to bottom
   const scrollToBottom = () => {
     chatRef.current?.scrollTo({
       top: chatRef.current.scrollHeight,
@@ -25,7 +24,6 @@ function App() {
     });
   };
 
-  // Check backend health
   useEffect(() => {
     fetch(`${API_BASE}/health`)
       .then((res) => res.json())
@@ -33,7 +31,6 @@ function App() {
       .catch(() => setHealthStatus("Error"));
   }, []);
 
-  // Load personas and messages
   useEffect(() => {
     loadPersonas();
     loadMessages();
@@ -279,7 +276,7 @@ function App() {
               >
                 {
                   <span className="sender">
-                    {getPersonaName(msg.senderId)} - {" "}
+                    {getPersonaName(msg.senderId)} -{" "}
                   </span>
                 }
 
